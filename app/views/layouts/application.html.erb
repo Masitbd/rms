@@ -2,17 +2,27 @@
 <html>
   <head>
     <title>Rms</title>
+    <meta name="robots" content="noindex">
+      <meta name="googlebot" content="noindex">
+      <meta name="viewport" content ="width=device-width; initial-scale=1.0;">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
   </head>
-
   <body>
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
+      <% if user_signed_in? %>
+    		<%= render :partial => 'template/menu' %>
+      <% end %>
+
+      <div class="rms_wrapper">
+    		<%= render :partial => 'template/alerts' %>
+      
 
     <%= yield %>
+
+    </div>
   </body>
 </html>

@@ -48,3 +48,35 @@
     </div>
   </div>
 </div>
+
+
+
+
+
+<li><%=# link_to 'New Sale', new_sale_path, :class => "btn btn-success btn-lg active" %>
+        </li>
+        <li>
+          <%=# link_to(destroy_user_session_path, :method => :delete) do %>
+            <span class="glyphicon glyphicon-remove-circle"></span>
+          <%# end %>
+        </li>
+
+
+
+
+         <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+  
+
+
+  <% if notice %>
+  <div class="alert alert-info">
+    <strong>Notice!</strong> <%= notice %>
+  </div>
+<% end %>
+
+<% if alert %>
+  <div class="alert alert-danger">
+    <strong>Alert!</strong> <%= alert %>
+  </div>
+<% end %>
