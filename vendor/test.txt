@@ -80,3 +80,7 @@
     <strong>Alert!</strong> <%= alert %>
   </div>
 <% end %>
+
+
+
+<h2 class="form-signin-heading">Restauran Management System</h2>

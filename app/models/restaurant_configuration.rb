@@ -1,0 +1,2 @@
+class RestaurantConfiguration < ApplicationRecord
+end

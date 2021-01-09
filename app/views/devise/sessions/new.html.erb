@@ -1,6 +1,9 @@
 
 <%= form_for("user", :url => user_session_path, :html => { :class => "form-signin", :role => "form" }) do |f| %>
-  <h2 class="form-signin-heading">Restauran Management System</h2>
+  
+  <h2 class="form-signin-heading"><a target="_blank" href="<%= @configurations.website_url.blank? ? 'http://masitbd.com' : (@configurations.website_url) %>">
+          <%= @configurations.restaurant_name.blank? ? 'Restauran Management System' : @configurations.restaurant_name %></a></h2>
+
 
 <div class="form-group">
 
