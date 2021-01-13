@@ -9,4 +9,12 @@ resources :item_categories
       get 'update'
     end
   end
+
+  resources :items do
+    get 'search'
+    collection do
+      get 'search'
+    end
+  end
+
 end
