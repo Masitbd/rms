@@ -17,7 +17,7 @@
               <td><%= item.sku %></td>
               <td><%= item.name %></td>
               <td><%= item.item_category.blank? ? '-' : item.item_category.name %></td>
-              <td><%= number_to_currency(item.price , unit: 'BDT', separator: ".", delimiter: ",")%></td>
+              <td><%= number_to_currency(item.price , unit: config.currency)%></td>
               <td><%= link_to 'Show', edit_item_path(item) %> | <%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
             </tr>
           <% end %>
